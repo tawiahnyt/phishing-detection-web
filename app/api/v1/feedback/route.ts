@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || ""
 export async function POST(request: NextRequest) {
+
   try {
     const body = await request.json()
 
@@ -32,7 +33,7 @@ export async function POST(request: NextRequest) {
         { status: response.status }
       )
     }
-
+    
     return NextResponse.json(responseData || { status: "success" })
   } catch (error: any) {
     console.error("Error proxying to backend /api/v1/feedback:", error)
