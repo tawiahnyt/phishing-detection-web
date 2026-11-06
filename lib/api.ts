@@ -29,6 +29,8 @@ const API_BASE_URL = typeof window !== 'undefined'
   ? (process.env.NEXT_PUBLIC_API_URL ? `${process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, '')}/api/v1` : '/api/v1')
   : (process.env.BACKEND_API_URL ? `${process.env.BACKEND_API_URL.replace(/\/$/, '')}/api/v1` : 'http://127.0.0.1:8000/api/v1')
 
+
+
 /**
  * Calls POST /api/v1/predict
  */
